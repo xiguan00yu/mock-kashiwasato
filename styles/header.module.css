@@ -1,0 +1,163 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-right: 80px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  margin-left: 46px;
+}
+
+.left > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  padding-right: 30px;
+}
+
+.logo {
+  width: 34px;
+  background-color: black;
+  height: 100%;
+}
+
+.sideMenu,
+.langSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.sideMenu > a,
+.langSwitch > a {
+  margin: 0 8px;
+}
+
+.line {
+  width: 1px;
+  height: 1rem;
+  background-color: black;
+}
+
+.search {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  bottom: 0;
+}
+
+.menu,
+.sideMenu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .left > p:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .left > p:last-child {
+    display: none;
+  }
+  .header {
+    height: 28px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  .right {
+    display: none;
+  }
+  .logo {
+    width: 11px;
+  }
+
+  .left {
+    margin-left: 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+
+  .left > p {
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+  .left > p:last-child {
+    display: block;
+    margin-left: 0;
+    font-size: 12px;
+    transform: scale(0.8, 0.8);
+    transform-origin: 0 0;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuOpenButton {
+    cursor: pointer;
+    width: 27px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 27px 50px;
+    background-image: url(/menu_button_mobile.svg);
+  }
+
+  .menuOpenButton:hover {
+    background-position: 0 -25px;
+  }
+
+  .menuCloseButton {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 27px 54px;
+    background-image: url(/close.svg);
+  }
+
+  .menuCloseButton:hover {
+    background-position: 0 -27px;
+  }
+
+  .sideMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 26px;
+  }
+
+  .sideMenu p {
+    margin: 16px 0;
+  }
+}
