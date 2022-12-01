@@ -92,7 +92,7 @@ export default function Header() {
       {/* side menu in mobile */}
       <div
         style={{ display: !hideMenu ? "flex" : "none" }}
-        className={styles.sideMenu}
+        className={styles.msideMenu}
       >
         <div className={styles.menuPaths}>
           {paths.map((item) => (

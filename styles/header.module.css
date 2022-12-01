@@ -63,7 +63,7 @@
 }
 
 .menu,
-.sideMenu {
+.msideMenu {
   display: none;
 }
 
@@ -150,14 +150,14 @@
     background-position: 0 -27px;
   }
 
-  .sideMenu {
+  .msideMenu {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 0 26px;
   }
 
-  .sideMenu p {
+  .msideMenu p {
     margin: 16px 0;
   }
 }
